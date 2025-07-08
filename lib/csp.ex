@@ -1,7 +1,7 @@
 defmodule Csp do
   alias Csp.{Constraint, Backtracking}
 
-  @type variable :: atom
+  @type variable :: String.t()
   @type value :: any
   @type domain :: [value]
   @type constraint :: (value -> boolean) | (value, value -> boolean)
