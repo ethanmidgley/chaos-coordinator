@@ -41,13 +41,13 @@ defmodule Calendar.ProblemBuilder.Domain do
   end
 
   def fixed_time(%Entry{} = e) do
-    %{
+    %EntryDomain{
       start_time: e.fixed_start_time,
       end_time: DateTime.shift(e.fixed_start_time, e.duration)
     }
   end
 
-  def generate(%Entry{} = e, days) do
+  def create(%Entry{} = e, days) do
     if e.fixed do
       [fixed_time(e)]
     else

@@ -1,2 +1,0 @@
-defmodule Calendar.EntryConstraintBuilder do
-end
